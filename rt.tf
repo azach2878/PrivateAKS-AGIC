@@ -7,7 +7,7 @@ resource "azurerm_route_table" "rt" {
 }
 
 resource "azurerm_subnet_route_table_association" "rtsubnet" {
-    subnet_id                     = azurerm_subnet.kubesubnet.id
+    subnet_id                     = azurerm_subnet.AKSsubnet.id
     route_table_id                = azurerm_route_table.rt.id
     
     depends_on = [azurerm_virtual_network.aksvnet]
