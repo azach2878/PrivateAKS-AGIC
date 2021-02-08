@@ -6,7 +6,7 @@ resource "azurerm_virtual_network" "aksvnet" {
   address_space           = ["192.172.0.0/16"]
 }
 
-resource "azurerm_subnet" "kubesubnet" {
+resource "azurerm_subnet" "AKSsubnet" {
   name                    = "kube-Subnet"
   resource_group_name     = azurerm_resource_group.aksrg.name
   virtual_network_name    = azurerm_virtual_network.aksvnet.name
