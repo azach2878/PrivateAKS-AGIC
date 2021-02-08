@@ -1,9 +1,4 @@
-﻿# Login to your ACR
-az acr login --name acrazdevopstf2020
 
-
-# Login to your AKS Cluster 
-az aks get-credentials --name aks --resource-group aks
 #-----------------------------------------------------------------------------------------------------------------
 #                                              Enable & Configure AGIC. 
 #-----------------------------------------------------------------------------------------------------------------
