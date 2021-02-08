@@ -1,5 +1,5 @@
 resource "azurerm_role_assignment" "rbac1" {
-    scope                               = azurerm_container_registry.acr.id
+    scope                               = local.acrID
     role_definition_name                = "AcrPull"
     principal_id                        = azurerm_kubernetes_cluster.aks.kubelet_identity.0.object_id
     skip_service_principal_aad_check    = true
@@ -29,21 +29,3 @@ resource "azurerm_role_assignment" "rbac5" {
     role_definition_name                = "Reader"
     principal_id                        = azurerm_user_assigned_identity.aksManagedUser.principal_id
 }
-
-/*
-resource "azurerm_role_assignment" "rbac6" {
-    scope                               = data.azurerm_resource_group.kvrg.id
-    role_definition_name                = "Contributor"
-    principal_id                        = azurerm_user_assigned_identity.aksManagedUser.principal_id
-}
-
-*/
-
-
-
-
-
-
-# If you have an ACR already created, you can reference it here 
-# data.azurerm_container_registry.acr.id
-# "${data.azurerm_subscription.current.id}/resourceGroups/${var.rg}"
