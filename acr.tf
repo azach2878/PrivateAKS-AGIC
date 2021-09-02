@@ -1,5 +1,5 @@
 
-/* Uncomment if you don't have an Azure Container registry
+
 
 resource "azurerm_container_registry" "acr" {
   name                     = var.container_registry_name
@@ -9,4 +9,4 @@ resource "azurerm_container_registry" "acr" {
   admin_enabled            = false
 }
 
-*/ 
+
