@@ -2,7 +2,6 @@
 
 Fully Private AKS Cluster. | Green Field
 Using Firewall / NVA & Application Gateway AGIC (Ingress Controller) Using Terraform.
-##
 ## Best practices for cluster isolation in Azure Kubernetes Service (AKS) 
 Kubernetes provides features that let you logically isolate teams and workloads in the same cluster. 
 The goal should be to provide the least number of privileges, scoped to the resources each team needs. 
@@ -14,7 +13,6 @@ Additional Kubernetes features and considerations for isolation and multi-tenanc
 - Containers includes the Azure Policy Add-on for AKS to enforce pod security, the use of pod security contexts, and scanning both images and the runtime for vulnerabilities. Also involves using App Armor or Seccomp (Secure Computing) to restrict container access to the underlying node.
 
 ![image](https://user-images.githubusercontent.com/51384650/131776942-cd9079c3-067c-4e13-b474-f8a8dc88c22b.png)
-##
 ## Isolate your AKS workload logically. 
 Best practice guidance: 
       Use logical isolation to separate teams and projects. Try to minimize the number of physical AKS clusters you deploy to isolate teams or applications.
@@ -24,7 +22,6 @@ Logical separation of clusters usually provides a higher pod density than physic
 When combined with the Kubernetes cluster Auto-Scaler, you can scale the number of nodes up or down to meet demands. This best practice approach to autoscaling lets you run only the number of nodes required and minimizes costs.
 
 ![image](https://user-images.githubusercontent.com/51384650/131777503-1b42ec2b-07bc-4e4b-a3d1-d325db9fd6f6.png)
-## 
 
 ## Best Practices for Network Connectivity and Security in Azure Kubernetes Service (AKS) 
 As you create and manage clusters in Azure Kubernetes Service (AKS), you provide network connectivity for your nodes and applications. These network resources include IP address ranges, load balancers, and ingress 
